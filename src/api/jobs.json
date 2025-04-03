@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Engineer",
+    "category": "Frontend",
+    "company": "WebCrafters",
+    "description": "Seeking a skilled React developer.",
+    "location": "San Francisco"
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "DevFirm",
+    "description": "Looking for a Node.js expert...",
+    "location": "New York"
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "CodeMasters",
+    "description": "Join our team as a versatile developer.",
+    "location": "London"
+  },
+  {
+    "id": 4,
+    "title": "UI/UX Designer",
+    "category": "Design",
+    "company": "PixelPerfect",
+    "description": "Create stunning user interfaces.",
+    "location": "Tokyo"
+  },
+  {
+    "id": 5,
+    "title": "QA Engineer",
+    "category": "Testing",
+    "company": "BugBusters",
+    "description": "Ensure high-quality software releases.",
+    "location": "Berlin"
+  },
+  {
+    "id": 6,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "ReactRiot",
+    "description": "Develop modern web applications.",
+    "location": "Austin"
+  },
+  {
+    "id": 7,
+    "title": "Backend Engineer",
+    "category": "Backend",
+    "company": "PythonPower",
+    "description": "Build robust server-side applications.",
+    "location": "Seattle"
+  },
+  {
+    "id": 8,
+    "title": "Full Stack Engineer",
+    "category": "Full Stack",
+    "company": "MERNStack",
+    "description": "Work with MongoDB, Express, React, and Node.",
+    "location": "Toronto"
+  },
+  {
+    "id": 9,
+    "title": "Web Designer",
+    "category": "Design",
+    "company": "DesignDivas",
+    "description": "Craft beautiful and functional websites.",
+    "location": "Sydney"
+  },
+  {
+    "id": 10,
+    "title": "Software Tester",
+    "category": "Testing",
+    "company": "TestTigers",
+    "description": "Perform thorough testing and analysis.",
+    "location": "Paris"
+  },
+  {
+    "id": 11,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "VueVanguard",
+    "description": "Develop dynamic Vue.js applications.",
+    "location": "Chicago"
+  },
+  {
+    "id": 12,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "JavaJunction",
+    "description": "Build scalable Java applications.",
+    "location": "Los Angeles"
+  },
+  {
+    "id": 13,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "MEANStack",
+    "description": "Develop with MongoDB, Express, Angular, and Node.",
+    "location": "Dubai"
+  },
+  {
+    "id": 14,
+    "title": "UX Designer",
+    "category": "Design",
+    "company": "UserCentric",
+    "description": "Focus on user experience and usability.",
+    "location": "Singapore"
+  },
+  {
+    "id": 15,
+    "title": "Automation Tester",
+    "category": "Testing",
+    "company": "AutoTest",
+    "description": "Implement automated testing frameworks.",
+    "location": "Amsterdam"
+  },
+  {
+    "id": 16,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "AngularAce",
+    "description": "Develop enterprise-level Angular applications.",
+    "location": "Miami"
+  },
+  {
+    "id": 17,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "GoGurus",
+    "description": "Build high-performance Go applications.",
+    "location": "Denver"
+  },
+  {
+    "id": 18,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "LAMPStack",
+    "description": "Develop with Linux, Apache, MySQL, and PHP.",
+    "location": "Madrid"
+  },
+  {
+    "id": 19,
+    "title": "Visual Designer",
+    "category": "Design",
+    "company": "VisualVibe",
+    "description": "Create compelling visual designs.",
+    "location": "Rome"
+  },
+  {
+    "id": 20,
+    "title": "Performance Tester",
+    "category": "Testing",
+    "company": "PerfPro",
+    "description": "Analyze and improve application performance.",
+    "location": "Stockholm"
+  },
+  {
+    "id": 21,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "SvelteSquad",
+    "description": "Develop lightweight Svelte applications.",
+    "location": "Vancouver"
+  },
+  {
+    "id": 22,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "RubyRealm",
+    "description": "Build dynamic Ruby on Rails applications.",
+    "location": "Oslo"
+  },
+  {
+    "id": 23,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "DjangoDevs",
+    "description": "Develop with Python and Django.",
+    "location": "Helsinki"
+  },
+  {
+    "id": 24,
+    "title": "Interaction Designer",
+    "category": "Design",
+    "company": "InteractIQ",
+    "description": "Design intuitive user interactions.",
+    "location": "Copenhagen"
+  },
+  {
+    "id": 25,
+    "title": "Security Tester",
+    "category": "Testing",
+    "company": "SecureTest",
+    "description": "Ensure application security and integrity.",
+    "location": "Dublin"
+  },
+  {
+    "id": 26,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "LitLabs",
+    "description": "Develop web components with Lit.",
+    "location": "Brussels"
+  },
+  {
+    "id": 27,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "KotlinKings",
+    "description": "Build modern Kotlin applications.",
+    "location": "Vienna"
+  },
+  {
+    "id": 28,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "LaravelLegends",
+    "description": "Develop with PHP and Laravel.",
+    "location": "Zurich"
+  },
+  {
+    "id": 29,
+    "title": "Product Designer",
+    "category": "Design",
+    "company": "ProductPulse",
+    "description": "Design user-centered products.",
+    "location": "Lisbon"
+  },
+  {
+    "id": 30,
+    "title": "Mobile Tester",
+    "category": "Testing",
+    "company": "MobileMinds",
+    "description": "Test mobile applications on various platforms.",
+    "location": "Prague"
+  },
+  {
+    "id": 31,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "SolidStart",
+    "description": "Develop performant SolidJS applications.",
+    "location": "Warsaw"
+  },
+  {
+    "id": 32,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "RustRockets",
+    "description": "Build safe and efficient Rust applications.",
+    "location": "Budapest"
+  },
+  {
+    "id": 33,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "FlaskForce",
+    "description": "Develop with Python and Flask.",
+    "location": "Bucharest"
+  },
+  {
+    "id": 34,
+    "title": "Motion Designer",
+    "category": "Design",
+    "company": "MotionMagic",
+    "description": "Create engaging motion graphics.",
+    "location": "Sofia"
+  },
+  {
+    "id": 35,
+    "title": "Usability Tester",
+    "category": "Testing",
+    "company": "UserInsight",
+    "description": "Conduct usability testing and analysis.",
+    "location": "Athens"
+  },
+  {
+    "id": 36,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "EmberElite",
+    "description": "Develop robust Ember.js applications.",
+    "location": "Riga"
+  },
+  {
+    "id": 37,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "ElixirExperts",
+    "description": "Build scalable Elixir applications.",
+    "location": "Tallinn"
+  },
+  {
+    "id": 38,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "SpringSprint",
+    "description": "Develop with Java and Spring Boot.",
+    "location": "Vilnius"
+  },
+  {
+    "id": 39,
+    "title": "Graphic Designer",
+    "category": "Design",
+    "company": "GraphicGenius",
+    "description": "Create stunning graphic designs.",
+    "location": "Bratislava"
+  },
+  {
+    "id": 40,
+    "title": "API Tester",
+    "category": "Testing",
+    "company": "APIAssure",
+    "description": "Test and validate API functionality.",
+    "location": "Ljubljana"
+  },
+  {
+    "id": 41,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "PreactPros",
+    "description": "Develop fast Preact applications.",
+    "location": "Zagreb"
+  },
+  {
+    "id": 42,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "ScalaStars",
+    "description": "Build high-concurrency Scala applications.",
+    "location": "Sarajevo"
+  },
+  {
+    "id": 43,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "ExpressExcellence",
+    "description": "Develop with Node.js and Express.",
+    "location": "Skopje"
+  },
+  {
+    "id": 44,
+    "title": "Brand Designer",
+    "category": "Design",
+    "company": "BrandBuilders",
+    "description": "Develop and maintain brand identities.",
+    "location": "Podgorica"
+  },
+  {
+    "id": 45,
+    "title": "Accessibility Tester",
+    "category": "Testing",
+    "company": "AccessAssured",
+    "description": "Ensure web accessibility compliance.",
+    "location": "Tirana"
+  },
+  {
+    "id": 46,
+    "title": "Frontend Developer",
+    "category": "Frontend",
+    "company": "AlpineAces",
+    "description": "Develop reactive Alpine.js applications.",
+    "location": "Pristina"
+  },
+  {
+    "id": 47,
+    "title": "Backend Developer",
+    "category": "Backend",
+    "company": "DartDynamos",
+    "description": "Build efficient Dart applications.",
+    "location": "Chisinau"
+  },
+  {
+    "id": 48,
+    "title": "Full Stack Developer",
+    "category": "Full Stack",
+    "company": "PhoenixPhantoms",
+    "description": "Develop with Elixir and Phoenix.",
+    "location": "Minsk"
+  },
+  {
+    "id": 49,
+    "title": "Layout Designer",
+    "category": "Design",
+    "company": "LayoutLegends",
+    "description": "Create effective page layouts.",
+    "location": "Kiev"
+  },
+  {
+    "id": 50,
+    "title": "Integration Tester",
+    "category": "Testing",
+    "company": "IntegrateIQ",
+    "description": "Test system integration and data flow.",
+    "location": "Tbilisi"
+  }
+]
