@@ -2,6 +2,7 @@
 import type { JobsResponse } from '@/api/api';
 import JobFilter from '@/components/JobFilter.vue';
 import JobsList from '@/components/JobsList.vue';
+import JobsPagination from '@/components/JobsPagination.vue';
 import { useJobstore } from '@/stores/jobsStore';
 import { computed, onMounted } from 'vue';
 
@@ -40,5 +41,6 @@ const onCategoryFilterChange = ({ value, property }: { value: string, property: 
   <main>
     <JobFilter @onfilter-change="onCategoryFilterChange" />
     <JobsList v-if="jobs" :jobs="jobs.items" @on-pagination-click="onPaginationChange" />
+    <JobsPagination v-if="jobs" @on-pagination-click="onPaginationChange" />
   </main>
 </template>
