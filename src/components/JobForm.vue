@@ -11,9 +11,10 @@ const onFormSubmit = (e: Event) => {
   const form = e.target as HTMLFormElement
   const formData = new FormData(form)
   const data = Object.fromEntries(formData.entries())
-  console.log('Form submitted:', data)
+
   setTimeout(() => {
     processing.value = false
+    console.log('Form submitted:', data)
     alert('Form submitted successfully!')
     form.reset()
   }, 2000)

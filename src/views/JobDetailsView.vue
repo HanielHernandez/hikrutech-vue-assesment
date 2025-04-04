@@ -37,7 +37,7 @@ const job = computed(() => jobsStore.selectedJob)
     </div>
     <div class="mb-4 p-4 border border-neutral-200 rounded-md">
       <h4 class="text-2xl font-bold text-neutral-800 mb-4 leading-tight">Apply for this job</h4>
-      <p class="text-neutral-600 mb-4 leading-1.5">
+      <p class="text-base text-neutral-600 mb-4 leading-6">
         Fill out the form below to apply for this job. We will get back to you as soon as possible.
       </p>
       <JobForm />

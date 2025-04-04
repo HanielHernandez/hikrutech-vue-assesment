@@ -1,18 +1,6 @@
-# vue-assesment
+# vue-assessment
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+This a Vue 3 assessment for [Hikru](https://www.hikrutech.com/), this project demonstrates a modern approach to building a job listing platform using Vue 3, leveraging its ecosystem for scalability and maintainability. The application is structured with reusable components, state management via Pinia, and routing with Vue Router to ensure a seamless user experience, routes were lazy loaded to improve performance. Mock jobs data is fetched and filtered dynamically from a simple json file, with pagination and search functionality enhancing usability. TailwindCSS is used for styling, ensuring a clean and responsive design. The project also incorporates TypeScript for type safety and Vitest for unit testing, ensuring code quality and reliability. This approach emphasizes modularity, performance, and a developer-friendly workflow.
 
 ## Project Setup
 
