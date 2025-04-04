@@ -1,23 +1,42 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getJobs } from '@/api/api'
+import { find, getJobs, type JobsResponse } from '@/api/api'
 import type { Job } from '@/types/jobs'
 
 export const useJobstore = defineStore('jobs', () => {
-  const items = ref<Job[]>([])
+  const data = ref<JobsResponse | null>(null)
   const page = ref(1)
   const endReached = ref(false)
-  const limit = 10
+  const category = ref<string | null>(null)
+  const search = ref<string | null>(null)
+  const current = ref<Job | null>(null)
 
   function get() {
-    const jobs = getJobs(page.value, limit)
+    const response = getJobs({
+      page: page.value,
+      filters: {
+        ...(category.value ? { category: category.value } : {}),
+        ...(search.value ? { search: search.value } : {}),
+      },
+    })
 
-    if (jobs.length === 0) {
+    if (response.totalPages === response.page) {
       endReached.value = true
-      return
     }
 
-    items.value = jobs
+    data.value = response
+  }
+
+  function setCategory(cat: string | null) {
+    category.value = cat === 'All' ? null : cat
+  }
+
+  function setSearch(searchVal: string) {
+    search.value = searchVal
+  }
+
+  function resetPage() {
+    page.value = 1
   }
 
   function nextPage() {
@@ -26,11 +45,29 @@ export const useJobstore = defineStore('jobs', () => {
   }
 
   function prevPage() {
-    console.log(page.value)
     if (page.value <= 1) return
     page.value = page.value - 1
     get()
   }
 
-  return { items, get, nextPage, prevPage, page, limit }
+  function findJob(id: number) {
+    const job = find(id)
+    current.value = job || null
+  }
+
+  return {
+    data,
+    get,
+    nextPage,
+    prevPage,
+    resetPage,
+    setCategory,
+    setSearch,
+    findJob,
+    category,
+    current,
+    search,
+    page,
+    endReached,
+  }
 })

@@ -15,8 +15,8 @@ defineProps<{
         <span class="text-neutral-600 font-bold text-sm"> {{ job.category }}</span>
       </h6>
       <div>
-        <span class="text-neutral-600 font-medium"> {{ job.company }}</span> ,
-        <span class="text-neutral-600 font-md"> {{ job.location }}</span>
+        <span class="text-neutral-600 font-medium"> {{ job.company }}</span>,<span class="text-neutral-600 font-md"> {{
+          job.location }}</span>
       </div>
     </div>
   </router-link>
