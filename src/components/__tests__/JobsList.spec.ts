@@ -33,10 +33,13 @@ const mockJobs = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{ path: '/jobs/:id', component: JobsList }],
+  routes: [
+    { path: '/jobs/:id', component: JobsList },
+    { path: '/', component: JobsList },
+  ],
 })
 
-describe('JobsListItem', () => {
+describe('JobsList.vue Component', () => {
   it('renders properly', () => {
     const wrapper = mount(JobsList, {
       props: { jobs: mockJobs },

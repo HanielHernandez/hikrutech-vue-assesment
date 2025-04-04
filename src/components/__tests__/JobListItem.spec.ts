@@ -1,8 +1,8 @@
 import { it, expect } from 'vitest'
-
 import { mount } from '@vue/test-utils'
-import JobListItem from '../JobListItem.vue'
 import { suite } from 'vitest'
+import { createRouter, createWebHistory } from 'vue-router'
+import JobListItem from '../JobListItem.vue'
 
 const mockJob = {
   title: 'Mock Job',
@@ -12,11 +12,21 @@ const mockJob = {
   location: 'mock location',
   category: 'mock category',
 }
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: '/jobs/:id', component: JobListItem },
+    { path: '/', component: JobListItem },
+  ],
+})
 
 suite('JobListItem.vue Component', () => {
   it('should render jobs properly', () => {
     const wrapper = mount(JobListItem, {
       props: { job: mockJob },
+      global: {
+        plugins: [router],
+      },
     })
 
     expect(wrapper.text()).toContain('Mock Job')
