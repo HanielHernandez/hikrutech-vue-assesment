@@ -26,7 +26,7 @@ watch(search, (newVal) => onFilterChange("search", newVal));
         class="px-3 py-2 pr-12 border cursor text-neutral-600 rounded md w-full border-neutral-300" />
       <span class="material-icons absolute top-2 right-3 text-neutral-600 z-40">search</span>
     </div>
-    <div class="gap-2 flex flex-row items-center">
+    <div class="gap-2 flex flex-row items-center w-full justify-center md:justify-end">
       <label for="category" class="font-medium text-neutral-800">Category:</label>
       <select v-model="cat" name="category" id="category"
         class="px-3 py-2 border text-neutral-600 rounded md border-neutral-300">

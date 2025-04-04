@@ -22,7 +22,7 @@ const job = computed(() => jobsStore.current)
 
 </script>
 <template>
-  <div class="w-full max-w-3xl mx-auto p-4">
+  <div class="w-full max-w-3xl mx-auto md:p-4">
     <router-link
       class="mb-4 flex items-center justify-center gap-2 text-center w-full hover:opacity-75 transition-colors ease-in-out duration-200"
       to="/jobs"> <span class="material-icons">arrow_back</span> Back to

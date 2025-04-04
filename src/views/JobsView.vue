@@ -14,22 +14,26 @@ const jobs = computed<JobsResponse | null>(() => jobsStore.data)
 
 // life cycle
 onMounted(() => {
+  jobsStore.setPage(1)
   jobsStore.get()
 })
 
+const paginationMethods: Record<string, () => void> = {
+  next: () => jobsStore.setPage(jobsStore.page + 1),
+  prev: () => jobsStore.setPage(jobsStore.page - 1),
+  start: () => jobsStore.setPage(1),
+  last: () => jobsStore.setPage(jobsStore.data?.totalPages ?? 0),
+}
+
 // methods
 const onPaginationChange = (flow: string) => {
-  if (flow === 'next') {
-    jobsStore.nextPage()
-    return
-  }
-
-  jobsStore.prevPage()
+  paginationMethods[flow]()
+  jobsStore.get()
 }
 
 
 const onCategoryFilterChange = ({ value, property }: { value: string, property: string }) => {
-  jobsStore.resetPage()
+  jobsStore.setPage(1)
   const action = property === 'category' ? jobsStore.setCategory : jobsStore.setSearch
   action(value)
   jobsStore.get()

@@ -20,10 +20,7 @@ export const useJobstore = defineStore('jobs', () => {
       },
     })
 
-    if (response.totalPages === response.page) {
-      endReached.value = true
-    }
-
+    endReached.value = response.totalPages <= response.page
     data.value = response
   }
 
@@ -35,19 +32,8 @@ export const useJobstore = defineStore('jobs', () => {
     search.value = searchVal
   }
 
-  function resetPage() {
-    page.value = 1
-  }
-
-  function nextPage() {
-    page.value++
-    get()
-  }
-
-  function prevPage() {
-    if (page.value <= 1) return
-    page.value = page.value - 1
-    get()
+  function setPage(p: number) {
+    page.value = p
   }
 
   function findJob(id: number) {
@@ -58,12 +44,10 @@ export const useJobstore = defineStore('jobs', () => {
   return {
     data,
     get,
-    nextPage,
-    prevPage,
-    resetPage,
     setCategory,
     setSearch,
     findJob,
+    setPage,
     category,
     current,
     search,
