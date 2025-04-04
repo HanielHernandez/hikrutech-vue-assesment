@@ -11,7 +11,7 @@ defineProps<{
 </script>
 <template>
   <fieldset class="flex flex-col w-full max-w-3xl mx-auto mb-4 last:mb-0">
-    <label class="font-bold mb-2">{{ label }}</label>
+    <label class="font-bold text-neutral-800 mb-2">{{ label }}</label>
     <component
       :is="isTextarea ? 'textarea' : 'input'"
       v-bind="$attrs"
