@@ -73,15 +73,23 @@ const applyFiters = (item: Job, filters: JobFilters): boolean => {
  * console.log(jobsResponse.page); // Current page number
  * console.log(jobsResponse.totalPages); // Total number of pages
  */
-export const getJobs = ({ page = 1, limit = 10, filters }: JobFilterOptions): JobsResponse => {
+export const getJobs = async ({
+  page = 1,
+  limit = 10,
+  filters,
+}: JobFilterOptions): Promise<JobsResponse> => {
   const filteredJOBS = filters ? jobs.filter((item) => applyFiters(item, filters)) : jobs
 
-  return {
-    items: filteredJOBS.slice((page - 1) * limit, page * limit),
-    page,
-    totalPages: Math.ceil(filteredJOBS.length / limit),
-    totalItems: filteredJOBS.length,
-  }
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        items: filteredJOBS.slice((page - 1) * limit, page * limit),
+        page,
+        totalPages: Math.ceil(filteredJOBS.length / limit),
+        totalItems: filteredJOBS.length,
+      })
+    }, 1000)
+  })
 }
 
 /**

@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { JobsResponse } from '@/api/api';
-import JobFilter from '@/components/JobFilter.vue';
-import JobsList from '@/components/JobsList.vue';
-import JobsPagination from '@/components/JobsPagination.vue';
-import { useJobstore } from '@/stores/jobsStore';
-import { computed, onMounted } from 'vue';
-
+import type { JobsResponse } from '@/api/api'
+import JobFilter from '@/components/JobFilter.vue'
+import JobsList from '@/components/JobsList.vue'
+import JobsPagination from '@/components/JobsPagination.vue'
+import { useJobstore } from '@/stores/jobsStore'
+import { computed, onMounted } from 'vue'
 
 const jobsStore = useJobstore()
 // computed
 
 const jobs = computed<JobsResponse | null>(() => jobsStore.data)
-
+const loading = computed(() => jobsStore.loading)
 // life cycle
-onMounted(() => {
+onMounted(async () => {
   jobsStore.setPage(1)
-  jobsStore.get()
+  jobsStore.setCategory(null)
+  await jobsStore.get()
 })
 
 const paginationMethods: Record<string, () => void> = {
@@ -26,25 +26,27 @@ const paginationMethods: Record<string, () => void> = {
 }
 
 // methods
-const onPaginationChange = (flow: string) => {
+const onPaginationChange = async (flow: string) => {
   paginationMethods[flow]()
-  jobsStore.get()
+  await jobsStore.get()
 }
 
-
-const onCategoryFilterChange = ({ value, property }: { value: string, property: string }) => {
+const onCategoryFilterChange = async ({ value, property }: { value: string; property: string }) => {
   jobsStore.setPage(1)
   const action = property === 'category' ? jobsStore.setCategory : jobsStore.setSearch
   action(value)
-  jobsStore.get()
+  await jobsStore.get()
 }
-
 </script>
 
 <template>
   <main>
     <JobFilter @onfilter-change="onCategoryFilterChange" />
-    <JobsList v-if="jobs" :jobs="jobs.items" @on-pagination-click="onPaginationChange" />
+    <JobsList
+      :loading="loading"
+      :jobs="(jobs && jobs.items) || []"
+      @on-pagination-click="onPaginationChange"
+    />
     <JobsPagination v-if="jobs" @on-pagination-click="onPaginationChange" />
   </main>
 </template>
