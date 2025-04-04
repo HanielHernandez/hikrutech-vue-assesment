@@ -8,16 +8,16 @@ const emit = defineEmits<{
 
 const cat = ref<string>('All')
 const search = ref<string>('')
-
 const categories = computed(() => JOB_CATEGORIES)
 
-const onFilterChange = (property: "category" | "search", value: string) => {
-  emit("onfilterChange", { property, value: value || "" });
-};
 
 watch(cat, (newVal) => onFilterChange("category", newVal));
 watch(search, (newVal) => onFilterChange("search", newVal));
 
+
+const onFilterChange = (property: "category" | "search", value: string) => {
+  emit("onfilterChange", { property, value: value || "" });
+};
 </script>
 <template>
   <div class="flex flex-col md:flex-row md:justify-between gap-4 i py-4 md:px-0 max-w-3xl mx-auto">

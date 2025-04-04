@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import type { Job } from '@/types/jobs';
-import JobListItem from './JobListItem.vue';
+import type { Job } from '@/types/jobs'
+import JobListItem from './JobListItem.vue'
 
 defineProps<{
   jobs: Job[]
 }>()
-
-
 </script>
 <template>
   <div
-    class="flex flex-col  border-neutral-200 rounded-md w-full max-w-3xl mx-auto h-[calc(100vh-18rem)] overflow-y-auto">
+    class="flex flex-col border-neutral-200 rounded-md w-full max-w-3xl mx-auto h-[calc(100vh-18rem)] overflow-y-auto"
+  >
     <ul>
-      <li v-for="job in jobs" :key="job.id">
+      <li v-for="(job, i) in jobs" :key="job.id" :data-index="i">
         <JobListItem :job="job" />
       </li>
     </ul>

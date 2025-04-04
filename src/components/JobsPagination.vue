@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import JButton from './JButton.vue';
+import { computed } from 'vue';
 import { useJobstore } from '@/stores/jobsStore';
 import type { Flow } from '@/types/flow';
-import { computed } from 'vue';
-
+import JButton from './JButton.vue';
 
 const emit = defineEmits<{
   (e: 'onPaginationClick', flow: Flow): void

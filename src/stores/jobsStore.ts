@@ -9,7 +9,7 @@ export const useJobstore = defineStore('jobs', () => {
   const endReached = ref(false)
   const category = ref<string | null>(null)
   const search = ref<string | null>(null)
-  const current = ref<Job | null>(null)
+  const selectedJob = ref<Job | null>(null)
 
   function get() {
     const response = getJobs({
@@ -38,7 +38,7 @@ export const useJobstore = defineStore('jobs', () => {
 
   function findJob(id: number) {
     const job = find(id)
-    current.value = job || null
+    selectedJob.value = job || null
   }
 
   return {
@@ -49,7 +49,7 @@ export const useJobstore = defineStore('jobs', () => {
     findJob,
     setPage,
     category,
-    current,
+    selectedJob,
     search,
     page,
     endReached,
