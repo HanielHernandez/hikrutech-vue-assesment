@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import FormField from './FormField.vue'
-import JButton from './JButton.vue'
+import FormField from '@/components/FormField.vue'
+import JButton from '@/components/JButton.vue'
 
 const processing = ref(false)
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Job } from '@/types/jobs'
-import JobListItem from './JobListItem.vue'
-import JobListItemSekelton from './JobListItemSekelton.vue'
+import JobListItem from '@/components/JobListItem.vue'
+import JobListItemSkeleton from '@/components/JobListItemSkeleton.vue'
 import { computed } from 'vue'
 
 const props = defineProps<{
@@ -18,7 +18,7 @@ const noJobsFound = computed(() => props.jobs !== null && props.jobs.length === 
     <transition mode="out-in" name="slide-left">
       <ul v-if="loading">
         <li v-for="(e, i) in Array.from({ length: 8 })" :key="i">
-          <JobListItemSekelton />
+          <JobListItemSkeleton />
         </li>
       </ul>
       <ul v-else>

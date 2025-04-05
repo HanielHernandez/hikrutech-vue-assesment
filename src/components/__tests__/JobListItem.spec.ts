@@ -12,6 +12,7 @@ const mockJob = {
   location: 'mock location',
   category: 'mock category',
 }
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
