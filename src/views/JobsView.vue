@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { JobsResponse } from '@/api/api'
-import JobFilter from '@/components/jobs/JobFilters.vue'
-import JobsList from '@/components/jobs/JobsList.vue'
-import JobsPagination from '@/components/jobs/JobsPagination.vue'
+import OrJobFilter from '@/components/organism/JobFilters.vue'
+import MlPagination from '@/components/molecules/MlPagination.vue'
+import OrJobsList from '@/components/organism/OrJobsList.vue'
 import { useJobstore } from '@/stores/jobsStore'
 import { computed, onMounted, onBeforeUnmount } from 'vue'
 
@@ -44,12 +44,12 @@ const onCategoryFilterChange = async ({ value, property }: { value: string; prop
 
 <template>
   <main>
-    <JobFilter @onfilter-change="onCategoryFilterChange" />
-    <JobsList
+    <OrJobFilter @onfilter-change="onCategoryFilterChange" />
+    <OrJobsList
       :loading="loading"
       :jobs="(jobs && jobs.items) || null"
       @on-pagination-click="onPaginationChange"
     />
-    <JobsPagination v-if="jobs" @on-pagination-click="onPaginationChange" />
+    <MlPagination v-if="jobs" @on-pagination-click="onPaginationChange" />
   </main>
 </template>

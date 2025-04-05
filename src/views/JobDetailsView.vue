@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import JobForm from '@/components/jobs/JobForm.vue'
+import OrJobForm from '@/components/organism/OrJobForm.vue'
+import MlJobDetails from '@/components/molecules/MlJobDetails.vue'
+import AtText from '@/components/atoms/AtText.vue'
+
 import { useJobstore } from '@/stores/jobsStore'
 import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
@@ -25,22 +28,13 @@ const job = computed(() => jobsStore.selectedJob)
     >
       <span class="material-icons">arrow_back</span> Back to Jobs
     </router-link>
-    <div
-      v-if="job"
-      class="mb-4 p-4 border border-neutral-200 rounded-md hover:bg-neutral-100 shado-sm transition-colors ease-in-out duration-300 pointer"
-    >
-      <h1 class="text-3xl font-bold text-neutral-800 mb-3 leading-tight">{{ job.title }}</h1>
-      <p class="text-neutral-600 font-medium mb-4 leading-1.5">
-        {{ job.company }}, {{ job.location }}
-      </p>
-      <p class="text-neutral-600 mb-2 pt-4 border-t border-neutral-300">{{ job.description }}</p>
-    </div>
+    <MlJobDetails v-if="job" :job="job" />
     <div class="mb-4 p-4 border border-neutral-200 rounded-md">
-      <h4 class="text-2xl font-bold text-neutral-800 mb-4 leading-tight">Apply for this job</h4>
-      <p class="text-base text-neutral-600 mb-4 leading-6">
+      <AtText variant="h2" class="mb-2 leading-tight">Apply for this job</AtText>
+      <AtText variant="body" class="mb-4 leading-6">
         Fill out the form below to apply for this job. We will get back to you as soon as possible.
-      </p>
-      <JobForm />
+      </AtText>
+      <OrJobForm />
     </div>
   </div>
 </template>

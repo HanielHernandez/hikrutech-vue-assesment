@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useJobstore } from '@/stores/jobsStore'
 import type { Flow } from '@/types/flow'
-import BaseButton from '@/components/commons/BaseButton.vue'
+import AtButton from '@/components/atoms/AtButton.vue'
 
 const emit = defineEmits<{
   (e: 'onPaginationClick', flow: Flow): void
@@ -20,7 +20,7 @@ const onButtonClick = (flow: Flow) => {
 <template>
   <div class="flex flex-row justify-between w-full max-w-3xl mx-auto py-4">
     <div>
-      <BaseButton
+      <AtButton
         id="first_page"
         @click="onButtonClick('start')"
         class="mr-4"
@@ -28,19 +28,19 @@ const onButtonClick = (flow: Flow) => {
         :disabled="page === 1"
       >
         <span class="material-icons"> first_page </span>
-      </BaseButton>
-      <BaseButton
+      </AtButton>
+      <AtButton
         id="prev_page"
         @click="onButtonClick('prev')"
         title="Previous"
         :disabled="page === 1"
       >
         <span class="material-icons"> chevron_left </span>
-      </BaseButton>
+      </AtButton>
     </div>
     {{ page + '/' + totalPages }}
     <div>
-      <BaseButton
+      <AtButton
         id="next_page"
         @click="onButtonClick('next')"
         title="Next"
@@ -48,15 +48,15 @@ const onButtonClick = (flow: Flow) => {
         :disabled="endReached"
       >
         <span class="material-icons"> chevron_right </span>
-      </BaseButton>
-      <BaseButton
+      </AtButton>
+      <AtButton
         id="last_page"
         @click="onButtonClick('last')"
         title="Last Page"
         :disabled="endReached"
       >
         <span class="material-icons"> last_page </span>
-      </BaseButton>
+      </AtButton>
     </div>
   </div>
 </template>

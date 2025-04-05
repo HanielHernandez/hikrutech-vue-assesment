@@ -1,8 +1,6 @@
 # vue-assessment
 
-This a Vue 3 assessment for [Hikru](https://www.hikrutech.com/), this project demonstrates a modern approach to building a job listing platform using Vue 3, leveraging its ecosystem for scalability and maintainability. The application is structured with reusable components, state management via Pinia, and routing with Vue Router to ensure a seamless user experience, routes were lazy loaded to improve performance. Mock jobs data is fetched and filtered dynamically from a simple json file, with pagination and search functionality enhancing usability. TailwindCSS is used for styling, ensuring a clean and responsive design. The project also incorporates TypeScript for type safety and Vitest for unit testing, ensuring code quality and reliability. This approach emphasizes modularity, performance, and a developer-friendly workflow.
-
-## Project Setup
+This a Vue 3 assessment for [Hikru](https://www.hikrutech.com/), showcasing a modern and scalable approach to building a job listing platform. The application is built using Vue 3 and its ecosystem, with reusable components structured following the Atomic Design methodology. Each component was documented using Storybook, promoting clarity and maintainability. State management is handled via Pinia, while Vue Router enables seamless navigation with lazy-loaded routes for optimal performance. Mock job data is dynamically fetched and filtered from a local JSON file, with built-in pagination and search to enhance usability. Styling is managed with TailwindCSS for a clean and responsive UI. The project also leverages TypeScript for type safety and Vitest for unit testing, ensuring code quality, performance, and a streamlined developer experience.
 
 ```sh
 npm install
@@ -19,6 +17,13 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Run Storybook  [Vitest](https://vitest.dev/)
+
+```sh
+npm run storybook
+```
+
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
