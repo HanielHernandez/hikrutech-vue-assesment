@@ -7,9 +7,9 @@ suite('jobStore', () => {
     setActivePinia(createPinia())
   })
 
-  it('should get jobs list', () => {
+  it('should get jobs list', async () => {
     const jobStore = useJobstore()
-    jobStore.get()
+    await jobStore.get()
     expect(jobStore.data?.items.length).toBe(10)
   })
 
