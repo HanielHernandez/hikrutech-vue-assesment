@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { useJobstore } from '@/stores/jobsStore'
 import { JOB_CATEGORIES } from '@/const/categories'
-import SearchBar from '@/components/SearchBar.vue'
+import SearchBar from '@/components/commons/SearchBar.vue'
 
 const emit = defineEmits<{
   (e: 'onfilterChange', value: { value: string; property: string }): void
