@@ -44,4 +44,4 @@ const onFilterChange = (property: 'category' | 'search', value: string) => {
     </div>
   </div>
 </template>
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

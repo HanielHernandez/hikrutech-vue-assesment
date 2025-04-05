@@ -42,4 +42,4 @@ const onFormSubmit = (e: Event) => {
     </JButton>
   </form>
 </template>
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

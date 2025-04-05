@@ -6,7 +6,5 @@
     <div class="h-4 bg-neutral-300 rounded w-1/2"></div>
   </div>
 </template>
-
 <script setup lang="ts"></script>
-
 <style scoped></style>
