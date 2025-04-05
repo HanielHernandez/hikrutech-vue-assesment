@@ -88,7 +88,7 @@ export const getJobs = async ({
         totalPages: Math.ceil(filteredJOBS.length / limit),
         totalItems: filteredJOBS.length,
       })
-    }, 1000)
+    }, 500)
   })
 }
 

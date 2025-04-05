@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import TheNavbar from './components/TheNavbar.vue';
+import TheNavbar from './components/TheNavbar.vue'
 </script>
 
 <template>
@@ -12,7 +12,6 @@ import TheNavbar from './components/TheNavbar.vue';
       <transition name="slide-fade" mode="out-in" :duration="{ enter: 300, leave: 300 }">
         <component :is="Component" />
       </transition>
-
     </router-view>
   </main>
 </template>

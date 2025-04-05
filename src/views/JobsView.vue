@@ -1,21 +1,24 @@
 <script setup lang="ts">
 import type { JobsResponse } from '@/api/api'
-import JobFilter from '@/components/JobFilter.vue'
+import JobFilter from '@/components/JobFilters.vue'
 import JobsList from '@/components/JobsList.vue'
 import JobsPagination from '@/components/JobsPagination.vue'
 import { useJobstore } from '@/stores/jobsStore'
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, onBeforeUnmount } from 'vue'
 
 const jobsStore = useJobstore()
-// computed
 
+// computed
 const jobs = computed<JobsResponse | null>(() => jobsStore.data)
 const loading = computed(() => jobsStore.loading)
+
 // life cycle
 onMounted(async () => {
-  jobsStore.setPage(1)
-  jobsStore.setCategory(null)
   await jobsStore.get()
+})
+
+onBeforeUnmount(() => {
+  jobsStore.setData(null)
 })
 
 const paginationMethods: Record<string, () => void> = {
@@ -44,7 +47,7 @@ const onCategoryFilterChange = async ({ value, property }: { value: string; prop
     <JobFilter @onfilter-change="onCategoryFilterChange" />
     <JobsList
       :loading="loading"
-      :jobs="(jobs && jobs.items) || []"
+      :jobs="(jobs && jobs.items) || null"
       @on-pagination-click="onPaginationChange"
     />
     <JobsPagination v-if="jobs" @on-pagination-click="onPaginationChange" />

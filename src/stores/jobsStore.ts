@@ -23,7 +23,7 @@ export const useJobstore = defineStore('jobs', () => {
         },
       })
       endReached.value = response.totalPages <= response.page
-      data.value = response
+      setData(response)
       loading.value = false
     } catch (error) {
       console.error('Error fetching jobs:', error)
@@ -43,6 +43,10 @@ export const useJobstore = defineStore('jobs', () => {
     page.value = p
   }
 
+  function setData(payload: JobsResponse | null) {
+    data.value = payload
+  }
+
   function findJob(id: number) {
     const job = find(id)
     selectedJob.value = job || null
@@ -60,6 +64,7 @@ export const useJobstore = defineStore('jobs', () => {
     search,
     loading,
     page,
+    setData,
     endReached,
   }
 })
