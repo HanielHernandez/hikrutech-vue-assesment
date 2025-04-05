@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { useJobstore } from '@/stores/jobsStore'
 import { JOB_CATEGORIES } from '@/const/categories'
-import SearchBar from '@/components/commons/SearchBar.vue'
+import MlSearchBar from '@/components/molecules/MlSearchBar.vue'
 
 const emit = defineEmits<{
   (e: 'onfilterChange', value: { value: string; property: string }): void
@@ -22,12 +22,7 @@ const onFilterChange = (property: 'category' | 'search', value: string) => {
 </script>
 <template>
   <div class="flex flex-col md:flex-row md:justify-between gap-4 i mb-4 md:px-0 max-w-3xl mx-auto">
-    <SearchBar
-      v-model="search"
-      label="Search for jobs..."
-      :isTextarea="false"
-      class="w-full md:w-1/2"
-    />
+    <MlSearchBar v-model="search" :isTextarea="false" class="w-full md:w-1/2" />
     <div class="gap-2 flex flex-row items-center w-full justify-center md:justify-end">
       <label for="category" class="font-medium text-neutral-800">Category:</label>
       <select

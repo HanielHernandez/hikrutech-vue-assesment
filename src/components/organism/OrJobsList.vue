@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Job } from '@/types/jobs'
-import JobListItem from '@/components/jobs/JobListItem.vue'
-import JobListItemSkeleton from '@/components/jobs/JobListItemSkeleton.vue'
+import MlJobListItem from '@/components/molecules/MlJobListItem.vue'
+import AtSkeleton from '@/components/atoms/AtSkeleton.vue'
 import { computed } from 'vue'
 
 const props = defineProps<{
@@ -18,12 +18,12 @@ const noJobsFound = computed(() => props.jobs !== null && props.jobs.length === 
     <transition mode="out-in" name="slide-left">
       <ul v-if="loading">
         <li v-for="(e, i) in Array.from({ length: 8 })" :key="i">
-          <JobListItemSkeleton />
+          <AtSkeleton />
         </li>
       </ul>
       <ul v-else>
         <li v-for="(job, i) in jobs" :key="job.id" :data-index="i">
-          <JobListItem :job="job" />
+          <MlJobListItem :job="job" />
         </li>
         <li class="text-center text-neutral-600 leading-6" v-if="noJobsFound">
           No jobs found. Please check your filters or try again later.

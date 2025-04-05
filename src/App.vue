@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import TheNavbar from './components/layout/TheNavbar.vue'
+import MlNavbar from './components/molecules/MlNavbar.vue'
 </script>
 
 <template>
   <header class="container mx-auto">
-    <TheNavbar />
+    <MlNavbar />
   </header>
   <main class="container mx-auto p-4 pt-20">
     <router-view v-slot="{ Component }">
