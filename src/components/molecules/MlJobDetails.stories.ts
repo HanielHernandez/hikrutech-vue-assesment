@@ -1,21 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
-import MlJobListItem from '@/components/molecules/MlJobListItem.vue'
+import MlJobDetails from '@/components/molecules/MlJobDetails.vue'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: 'Molecules/MlJobListItem',
-  component: MlJobListItem,
+  title: 'Molecules/MlJobDetails',
+  component: MlJobDetails,
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   args: {
     job: {
       id: 1,
       title: 'My Job',
-      description: '',
+      description:
+        'Proident quis aute duis commodo exercitation adipisicing veniam amet. Cupidatat irure reprehenderit elit eiusmod occaecat sint est. Nisi labore sunt laborum commodo voluptate pariatur esse do.',
       location: 'Job Location',
-      company: 'company name',
-      category: 'category',
+      company: 'Job company name',
+      category: 'Job category',
     },
   },
   argTypes: {
@@ -25,11 +26,11 @@ const meta = {
     },
   },
   render: (args) => ({
-    components: { MlJobListItem },
+    components: { MlJobDetails },
     setup: () => ({ args }),
-    template: `<MlJobListItem v-bind="args" />`,
+    template: `<MlJobDetails v-bind="args" />`,
   }),
-} satisfies Meta<typeof MlJobListItem>
+} satisfies Meta<typeof MlJobDetails>
 
 export default meta
 type Story = StoryObj<typeof meta>
