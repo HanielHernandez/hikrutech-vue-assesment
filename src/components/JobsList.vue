@@ -13,7 +13,7 @@ const noJobsFound = computed(() => props.jobs !== null && props.jobs.length === 
 </script>
 <template>
   <div
-    class="flex flex-col border-neutral-200 rounded-md w-full max-w-3xl overflow-x-hidden mx-auto h-[calc(100vh-18rem)] overflow-y-auto"
+    class="flex flex-col border-neutral-200 rounded-md w-full max-w-3xl overflow-x-hidden mx-auto md:h-[calc(100vh-18rem)] overflow-y-auto"
   >
     <transition mode="out-in" name="slide-left">
       <ul v-if="loading">

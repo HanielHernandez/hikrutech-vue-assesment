@@ -20,7 +20,7 @@ defineProps<{
       v-model="model"
       class="py-2 px-12 border cursor text-neutral-600 rounded md w-full border-neutral-300"
     />
-    <span class="material-icons absolute py-2 px-3 top-0 left-0 text-neutral-600 z-40">search</span>
+    <span class="material-icons absolute py-2 px-3 top-0 left-0 text-neutral-600 z-20">search</span>
     <button
       @click="model = ''"
       class="material-icons absolute py-2 px-3 top-0 right-0 text-neutral-600 z-40 cursor-pointer transition-all ease-in-out duration-300"
