@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Job } from '@/types/jobs'
-import JobListItem from '@/components/JobListItem.vue'
-import JobListItemSkeleton from '@/components/JobListItemSkeleton.vue'
+import JobListItem from '@/components/jobs/JobListItem.vue'
+import JobListItemSkeleton from '@/components/jobs/JobListItemSkeleton.vue'
 import { computed } from 'vue'
 
 const props = defineProps<{
@@ -33,7 +33,7 @@ const noJobsFound = computed(() => props.jobs !== null && props.jobs.length === 
   </div>
 </template>
 <style lang="css" scoped>
-fade-enter-active,
+.fade-enter-active,
 .slide-left-enter-active,
 .slide-left-leave-active {
   transition: all 200ms ease-in-out;

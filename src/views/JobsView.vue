@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { JobsResponse } from '@/api/api'
-import JobFilter from '@/components/JobFilters.vue'
-import JobsList from '@/components/JobsList.vue'
-import JobsPagination from '@/components/JobsPagination.vue'
+import JobFilter from '@/components/jobs/JobFilters.vue'
+import JobsList from '@/components/jobs/JobsList.vue'
+import JobsPagination from '@/components/jobs/JobsPagination.vue'
 import { useJobstore } from '@/stores/jobsStore'
 import { computed, onMounted, onBeforeUnmount } from 'vue'
 

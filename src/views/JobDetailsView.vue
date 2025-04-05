@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import JobForm from '@/components/JobForm.vue'
+import JobForm from '@/components/jobs/JobForm.vue'
 import { useJobstore } from '@/stores/jobsStore'
 import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'

@@ -1,7 +1,7 @@
 import { it, expect, vi, suite } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import JobsPagination from '../JobsPagination.vue'
+import JobsPagination from '../jobs/JobsPagination.vue'
 
 const mockStore = {
   data: {

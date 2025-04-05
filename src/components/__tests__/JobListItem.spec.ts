@@ -2,7 +2,7 @@ import { it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { suite } from 'vitest'
 import { createRouter, createWebHistory } from 'vue-router'
-import JobListItem from '../JobListItem.vue'
+import JobListItem from '../jobs/JobListItem.vue'
 
 const mockJob = {
   title: 'Mock Job',

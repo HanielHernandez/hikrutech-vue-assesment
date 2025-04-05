@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import FormField from '@/components/FormField.vue'
-import JButton from '@/components/JButton.vue'
+import FormField from '@/components/commons/FormField.vue'
+import BaseButton from '@/components/commons/BaseButton.vue'
 
 const processing = ref(false)
 
@@ -33,13 +33,13 @@ const onFormSubmit = (e: Event) => {
       is-textarea
       required
     />
-    <JButton type="submit" :disabled="processing">
+    <BaseButton type="submit" :disabled="processing">
       Apply
       <span
         v-show="processing"
         class="inline-block w-6 h-6 border-4 ml-2 border-neutral-600 border-t-white rounded-full animate-spin"
       ></span>
-    </JButton>
+    </BaseButton>
   </form>
 </template>
 <style lang="scss" scoped></style>
