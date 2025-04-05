@@ -2,7 +2,7 @@ import { it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { suite } from 'vitest'
 import { createRouter, createWebHistory } from 'vue-router'
-import JobListItem from '../jobs/JobListItem.vue'
+import MlJobListItem from '../molecules/MlJobListItem.vue'
 
 const mockJob = {
   title: 'Mock Job',
@@ -16,14 +16,14 @@ const mockJob = {
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/jobs/:id', component: JobListItem },
-    { path: '/', component: JobListItem },
+    { path: '/jobs/:id', component: MlJobListItem },
+    { path: '/', component: MlJobListItem },
   ],
 })
 
-suite('JobListItem.vue Component', () => {
+suite('MlJobListItem.vue Component', () => {
   it('should render jobs properly', () => {
-    const wrapper = mount(JobListItem, {
+    const wrapper = mount(MlJobListItem, {
       props: { job: mockJob },
       global: {
         plugins: [router],

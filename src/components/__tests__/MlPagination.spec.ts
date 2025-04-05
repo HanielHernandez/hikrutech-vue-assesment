@@ -1,7 +1,7 @@
 import { it, expect, vi, suite } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import JobsPagination from '../jobs/JobsPagination.vue'
+import MlPagination from '@/components/molecules/MlPagination.vue'
 
 const mockStore = {
   data: {
@@ -24,28 +24,28 @@ vi.mock('@/stores/jobsStore', () => {
   }
 })
 
-suite('JobsPagination.vue Component', () => {
+suite('MlPagination.vue Component', () => {
   it('should render pages Properly', () => {
-    const wrapper = mount(JobsPagination, {})
+    const wrapper = mount(MlPagination, {})
     expect(wrapper.text()).toContain('1/5')
   })
 
   it('should render First page button as disabled', () => {
-    const wrapper = mount(JobsPagination, {})
+    const wrapper = mount(MlPagination, {})
     const startButton = wrapper.find('#first_page')
     expect(startButton.exists()).toBe(true)
     expect(startButton.attributes('disabled')).toBeDefined()
   })
 
   it('should render Next page button as disabled', () => {
-    const wrapper = mount(JobsPagination, {})
+    const wrapper = mount(MlPagination, {})
     const startButton = wrapper.find('#prev_page')
     expect(startButton.exists()).toBe(true)
     expect(startButton.attributes('disabled')).toBeDefined()
   })
 
   it('should trigger page change on next page click', () => {
-    const wrapper = mount(JobsPagination, {})
+    const wrapper = mount(MlPagination, {})
     const startButton = wrapper.find('#next_page')
     expect(startButton.exists()).toBe(true)
     startButton.trigger('click')
